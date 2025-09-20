@@ -1,0 +1,19 @@
+.projectSection {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.progressContainer {
+    width: 8px;
+    height: 100%;
+    background: #ccc;
+    position: sticky;
+    top: 0;
+}
+
+.progressBar {
+    height: 0%;
+    width: 8px;
+    background: #04AA6D;
+}

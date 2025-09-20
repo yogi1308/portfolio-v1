@@ -1,0 +1,9 @@
+.card {
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+li {
+    position: relative;
+    transform: translateX(-2.3rem);
+}
