@@ -313,7 +313,8 @@ export default function DotBackground({
         // sink into cursor
         const mx = mouseRef.current.x;
         const my = mouseRef.current.y;
-        if (mx > -9990) {
+        // Only apply cursor attraction when the pointer is actually inside the canvas bounds.
+        if (mx >= 0 && mx <= width && my >= 0 && my <= height) {
           const dist2 = dsq(p.x, p.y, mx, my);
           if (dist2 < ir2) {
             const dist = Math.sqrt(dist2) || 0.0001;
@@ -374,10 +375,20 @@ export default function DotBackground({
 
     const onMove = (e) => {
       const rect = container.getBoundingClientRect();
-      const x = (e.clientX ?? e.touches?.[0]?.clientX ?? -9999) - rect.left;
-      const y = (e.clientY ?? e.touches?.[0]?.clientY ?? -9999) - rect.top;
-      mouseRef.current.x = x;
-      mouseRef.current.y = y;
+      const rawX = (e.clientX ?? e.touches?.[0]?.clientX ?? -9999);
+      const rawY = (e.clientY ?? e.touches?.[0]?.clientY ?? -9999);
+      const x = rawX - rect.left;
+      const y = rawY - rect.top;
+
+      // If the pointer is outside the canvas bounds, ignore it.
+      // This prevents distant/offscreen points from being pulled into view.
+      if (x < 0 || x > width || y < 0 || y > height) {
+        mouseRef.current.x = -9999;
+        mouseRef.current.y = -9999;
+      } else {
+        mouseRef.current.x = x;
+        mouseRef.current.y = y;
+      }
     };
 
     const onLeave = () => {

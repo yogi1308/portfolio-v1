@@ -17,6 +17,20 @@ a {
   justify-content: space-between;
 }
 
-.section-margin {
-  margin: 3rem;
-}
+.section-margin {margin: 3rem;}
+
+.small-font {font-size: 0.7rem;}
+
+.small-font-2 {font-size: 1rem;}
+
+.medium-font {font-size: 1.2rem;}
+
+.big-font-3 {font-size: 1.75rem;}
+
+.big-font-2 {font-size: 3rem;}
+
+.big-font {font-size: 5rem;}
+
+.cursor {cursor: pointer;}
+
+.align-center {align-items: center;}

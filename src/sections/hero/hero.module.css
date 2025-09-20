@@ -1,3 +1,33 @@
 .heroSection {
     min-height: 100vh;
 }
+
+.title {
+    width: min-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap-mode: nowrap;
+    align-items: center;
+}
+
+.titleButtonContainer {
+    gap: 1rem;
+    width: 100%;
+}
+
+.titleButton {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.titleName {
+}
+
+.nameContainer {
+    align-items: center;
+}
