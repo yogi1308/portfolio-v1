@@ -1,0 +1,11 @@
+.form {
+    gap: 2rem;
+}
+
+.form > * > * {
+    width: 70%;
+}
+
+textarea {
+    height: 15rem;
+}
