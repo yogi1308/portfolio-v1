@@ -229,7 +229,7 @@
 
 
 
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export default function DotBackground({
   spacing = 20,
@@ -270,24 +270,27 @@ export default function DotBackground({
 
     const buildPoints = () => {
       pointsRef.current = [];
-      const cols = Math.ceil(width / spacing) + 1;
-      const rows = Math.ceil(height / spacing) + 1;
+      const cols = Math.ceil(width / spacing);
+      const rows = Math.ceil(height / spacing);
 
-      for (let y = 0; y < rows; y++) {
-        for (let x = 0; x < cols; x++) {
-          const px = x * spacing;
-          const py = y * spacing;
-          pointsRef.current.push({
-            x: px,
-            y: py,
-            ox: px,
-            oy: py,
-            vx: 0,
-            vy: 0,
-            jitter: (Math.random() - 0.5) * 0.6,
-          });
-        }
-      }
+      for (let y = 0; y <= rows; y++) {
+  for (let x = 0; x <= cols; x++) {
+    const px = x * spacing;
+    const py = y * spacing;
+    if (px <= width && py <= height) {
+      pointsRef.current.push({
+        x: px,
+        y: py,
+        ox: px,
+        oy: py,
+        vx: 0,
+        vy: 0,
+        jitter: (Math.random() - 0.5) * 0.6,
+      });
+    }
+  }
+}
+
     };
 
     const dsq = (ax, ay, bx, by) => {
@@ -344,6 +347,8 @@ export default function DotBackground({
       ctx.fillStyle = dotColor;
       for (let i = 0; i < pts.length; i++) {
         const p = pts[i];
+
+        if (p.x < 0 || p.y < 0 || p.x > width || p.y > height) continue;
 
         // Normalize coordinates to a [0, 1] range.
         const nx = p.x / width;

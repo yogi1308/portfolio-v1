@@ -1,0 +1,16 @@
+.scrollTrack {
+  position: sticky;
+  top: 5rem;            /* distance from top of viewport */
+  min-height: 100%;         /* visible height */
+  width: 2px;           /* thickness of bar */
+  background-color: black;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.scrollThumb {
+  width: 100%;
+  background-color: #4da3ff;
+  border-radius: 4px;
+  transition: height 0.2s ease;
+}
