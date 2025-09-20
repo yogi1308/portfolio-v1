@@ -4,12 +4,12 @@ import ProjectsCards from "./project-components/Project-cards"
 
 export default function Projects() {
     return(
-        <div class={`${styles.projectSection} section-margin`} >
-            <div class="progress-container">
-                <div class={`${styles.progressBar}`} id="myBar"></div>
+        <div className={`${styles.projectSection} section-margin`} >
+            <div className={`progress-container`}>
+                <div className={`${styles.progressBar}`} id="myBar"></div>
             </div>
             <div>
-                <h2 class={` section-header`} >Experience</h2>
+                <h2 className={` section-header`} >Experience</h2>
                 {projectsContent.map((project, index) => (
                     <ProjectsCards key={index} project={project}/>
                 ))}
@@ -17,3 +17,4 @@ export default function Projects() {
         </div>
     )
 }
+

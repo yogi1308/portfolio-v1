@@ -2,8 +2,8 @@ import styles from './project-card.module.css'
 
 export default function ProjectsCards({ project }) {
     return(
-        <div class={`${styles.card} flex-vert`} >
-            <div class={`flex-horiz`} >
+        <div className={`${styles.card} flex-vert`} >
+            <div className={`flex-horiz`} >
                 <h3>{project.name}</h3>
                 <p>{project.time}</p>
             </div>
