@@ -229,23 +229,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useRef, useEffect } from "react";
 
 export default function DotBackground({
@@ -361,25 +344,22 @@ export default function DotBackground({
       for (let i = 0; i < pts.length; i++) {
         const p = pts[i];
 
-        // fade based on vertical position (bottom → darker)
-        // center-based radial fade
-        // center-based radial fade (left/right edges)
-        const cx = width / 2;
-        const cy = height / 2;
-        const dx = p.x - cx;
-        const dy = p.y - cy;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = Math.sqrt(cx * cx + cy * cy);
-        const radialFade = 1 - dist / maxDist;
+        // Normalize coordinates to a [0, 1] range.
+        const nx = p.x / width;
+        const ny = p.y / height;
 
-        // vertical fade (top & bottom)
-        const verticalFade = 1 - Math.abs(p.y - cy) / cy;
+        // Use a sine curve for a smooth fade from the horizontal edges.
+        const fadeX = Math.sin(nx * Math.PI);
 
-        // blend with stronger vertical influence
-        const fade = Math.max(0, radialFade * 0.05 + verticalFade * 0.99);
+        // Apply a power to `ny` to make the fade stronger at the bottom,
+        // shifting the "brightest" area upwards.
+        const fadeY = Math.sin(Math.pow(ny, 0.7) * Math.PI);
 
-        // smooth easing
-        ctx.globalAlpha = Math.pow(fade, 1.3);
+        // Multiply the fades. If a point is at any edge, the result is 0.
+        const fade = fadeX * fadeY;
+        
+        // Apply a final easing power curve for a more dramatic falloff.
+        ctx.globalAlpha = Math.pow(fade, 1.5);
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, dotSize, 0, Math.PI * 2);
