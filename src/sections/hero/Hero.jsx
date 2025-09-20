@@ -1,11 +1,11 @@
 import styles from './hero.module.css'
-import HeroBG from "./hero-components/HeroBG"
+import DotBg from "../../background/DotBg"
 import Title from "./hero-components/Title"
 
 export default function Hero() {
     return(
         <div className={`${styles.heroSection}`} >
-            <HeroBG />
+            <DotBg />
             <Title/>
         </div>
     )

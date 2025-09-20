@@ -35,22 +35,15 @@ export default function ProjectsCards({ project }) {
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
             >
-                <img src={project.thumbnail} className={styles.projectCardImage} />
+                <a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content' }}>
+                    <img src={project.thumbnail} className={styles.projectCardImage} />
+                </a>
             </div>
             <div className={`${styles.card} flex-vert`} >
                 <div className={`flex-horiz`} >
                     <h3>{project.name}</h3>
                     <p>{project.time}</p>
                 </div>
-                <a
-                    href={project.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.name} (opens in a new tab)`}
-                    style={{ width: 'min-content' }}
-                >
-                    View Project
-                </a>
                 <ul>
                     {project.projectDetails.map((detail, index) => (
                         <li key={index}>{detail}</li>

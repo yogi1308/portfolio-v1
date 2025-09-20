@@ -1,8 +1,10 @@
 import styles from './contact.module.css'
+import DotBg from "../../background/DotBg"
 
 export default function Contact() {
     return(
-        <div className={`section-margin`}>
+        <div className={`section-margin ${styles.contactSection}`}>
+            <DotBg />
             <h2 className={`big-font`} >
                 Contact Me
             </h2>

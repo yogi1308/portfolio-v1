@@ -12,3 +12,9 @@
 .projectCardsContainer {
     gap: 2rem;
 }
+
+.projectSection {
+    position: relative;
+    overflow: hidden;
+}
+

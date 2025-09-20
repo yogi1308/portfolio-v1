@@ -9,3 +9,16 @@
 textarea {
     height: 15rem;
 }
+
+.contactSection {
+    position: relative;
+    overflow: hidden;
+}
+
+.contactSection canvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    transform: translateX(-200px);
+}
