@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 export default function FloatingParticlesBackground({
-  particleCount = 50,
+  particleDensity = 0.00012, // particles per pixel² (adjustable)
+  minParticles = 20, // minimum number of particles
+  maxParticles = 200, // maximum number of particles
   particleSize = 2,
   particleOpacity = 0.6,
   glowIntensity = 10,
@@ -17,6 +19,7 @@ export default function FloatingParticlesBackground({
   interactionType = "bounce", // "bounce", "merge"
   className = "",
   style = {}
+  , pointerTargetRef = null
 }) {
   const canvasRef = useRef(null);
   const animationRef = useRef();
@@ -25,8 +28,19 @@ export default function FloatingParticlesBackground({
   const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 });
   const containerRef = useRef(null);
 
+  // Calculate particle count based on area
+  const calculateParticleCount = useCallback((width, height) => {
+    const area = width * height;
+    const idealCount = Math.round(area * particleDensity);
+    const finalCount = Math.max(minParticles, Math.min(maxParticles, idealCount));
+    return finalCount;
+  }, [particleDensity, minParticles, maxParticles]);
+
   const initializeParticles = useCallback((width, height) => {
-    return Array.from({ length: particleCount }, (_, index) => ({
+    const count = calculateParticleCount(width, height);
+  // (calculated particle count tracked internally; no state update needed)
+    
+    return Array.from({ length: count }, (_, index) => ({
       x: Math.random() * width,
       y: Math.random() * height,
       vx: (Math.random() - 0.5) * movementSpeed,
@@ -39,14 +53,43 @@ export default function FloatingParticlesBackground({
       glowMultiplier: 1,
       glowVelocity: 0
     }));
-  }, [particleCount, particleSize, particleOpacity, movementSpeed]);
+  }, [calculateParticleCount, particleSize, particleOpacity, movementSpeed]);
 
   const redistributeParticles = useCallback((width, height) => {
+    const newCount = calculateParticleCount(width, height);
+    
+    // If we need more particles, add them
+    if (newCount > particlesRef.current.length) {
+      const additionalParticles = newCount - particlesRef.current.length;
+      for (let i = 0; i < additionalParticles; i++) {
+        particlesRef.current.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * movementSpeed,
+          vy: (Math.random() - 0.5) * movementSpeed,
+          size: Math.random() * particleSize + 1,
+          opacity: particleOpacity,
+          baseOpacity: particleOpacity,
+          mass: Math.random() * 0.5 + 0.5,
+          id: particlesRef.current.length + i,
+          glowMultiplier: 1,
+          glowVelocity: 0
+        });
+      }
+    } 
+    // If we have too many particles, remove some
+    else if (newCount < particlesRef.current.length) {
+      particlesRef.current = particlesRef.current.slice(0, newCount);
+    }
+    
+    // Redistribute existing particles across the new dimensions
     particlesRef.current.forEach(particle => {
       particle.x = Math.random() * width;
       particle.y = Math.random() * height;
     });
-  }, []);
+    
+  // (no state update needed for particle count)
+  }, [calculateParticleCount, movementSpeed, particleSize, particleOpacity]);
 
   const updateParticles = useCallback(canvas => {
     const rect = canvas.getBoundingClientRect();
@@ -196,7 +239,7 @@ export default function FloatingParticlesBackground({
       if (particle.y < 0) particle.y = rect.height;
       if (particle.y > rect.height) particle.y = 0;
     });
-  }, [mouseInfluence, mouseGravity, gravityStrength, glowAnimation, particleInteraction, interactionType]);
+  }, [mouseInfluence, mouseGravity, gravityStrength, glowAnimation, particleInteraction, interactionType, maxReactiveParticles]);
 
   const drawParticles = useCallback(ctx => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -277,7 +320,7 @@ export default function FloatingParticlesBackground({
     }
   }, [redistributeParticles]);
 
-  // Effect to reinitialize particles when particle count changes
+  // Effect to reinitialize particles when density or constraints change
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -286,7 +329,7 @@ export default function FloatingParticlesBackground({
       canvas.width || canvasSize.width,
       canvas.height || canvasSize.height
     );
-  }, [particleCount, initializeParticles, canvasSize]);
+  }, [particleDensity, minParticles, maxParticles, initializeParticles, canvasSize]);
 
   // Effect to update particle properties when they change
   useEffect(() => {
@@ -307,10 +350,13 @@ export default function FloatingParticlesBackground({
   useEffect(() => {
     resizeCanvas();
 
-    const canvas = canvasRef.current;
-    if (canvas) {
-      canvas.addEventListener("mousemove", handleMouseMove);
-      canvas.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    // choose a target to listen for pointer events: provided parent ref (e.g., section) or window fallback
+    const pointerTarget = (pointerTargetRef && pointerTargetRef.current) || window;
+
+    if (pointerTarget) {
+      pointerTarget.addEventListener("mousemove", handleMouseMove);
+      pointerTarget.addEventListener("touchmove", handleTouchMove, { passive: false });
     }
 
     window.addEventListener("resize", resizeCanvas);
@@ -325,16 +371,16 @@ export default function FloatingParticlesBackground({
     }
 
     return () => {
-      if (canvas) {
-        canvas.removeEventListener("mousemove", handleMouseMove);
-        canvas.removeEventListener("touchmove", handleTouchMove);
+      if (pointerTarget) {
+        pointerTarget.removeEventListener("mousemove", handleMouseMove);
+        pointerTarget.removeEventListener("touchmove", handleTouchMove);
       }
       window.removeEventListener("resize", resizeCanvas);
       if (resizeObserver) {
         resizeObserver.disconnect();
       }
     };
-  }, [handleMouseMove, handleTouchMove, resizeCanvas]);
+  }, [handleMouseMove, handleTouchMove, resizeCanvas, pointerTargetRef]);
 
   useEffect(() => {
     animate();
@@ -354,8 +400,12 @@ export default function FloatingParticlesBackground({
         width: "100%",
         height: "100%",
         backgroundColor,
-        position: "relative",
         overflow: "hidden",
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        pointerEvents: 'none',
         ...style
       }}
     >

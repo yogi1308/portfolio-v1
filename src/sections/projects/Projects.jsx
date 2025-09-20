@@ -10,7 +10,7 @@ export default function Projects() {
 
   return (
     <div ref={sectionRef} className={`${styles.projectSection} section-margin`}>
-        <FloatingParticlesBackground className={`${styles.floatingParticlesBackground}`}/>
+        <FloatingParticlesBackground pointerTargetRef={sectionRef} className={`${styles.floatingParticlesBackground}`}/>
         <h2 className={`${styles.projectSectionTitle} big-font`}>Projects</h2>
         <div className={`${styles.progressAndCardsContainer} `}>
             <div className={`${styles.progressContainer} `}>
