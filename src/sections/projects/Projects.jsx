@@ -9,12 +9,12 @@ export default function Projects() {
 
   return (
     <div ref={sectionRef} className={`${styles.projectSection} section-margin`}>
-        <h2 className="section-header">Experience</h2>
+        <h2 className={`${styles.projectSectionTitle} big-font`}>Projects</h2>
         <div className={`${styles.progressAndCardsContainer} `}>
             <div className={`${styles.progressContainer} `}>
                 <ProjectScrollIndicator sectionRef={sectionRef} />
             </div>
-            <div className={`${styles.projectCardsContainer} `}>
+            <div className={`${styles.projectCardsContainer} flex-vert`}>
                 {projectsContent.map((project, index) => (
                   <ProjectsCards key={index} project={project} />
                 ))}

@@ -1,9 +1,14 @@
 .progressContainer {
     position: relative;
-    transform: translateX(-3rem);
+    transform: translateX(7.5rem);
     min-height: 100%;
+    z-index: -1;
 }
 
 .progressAndCardsContainer {
     display: flex;
+}
+
+.projectCardsContainer {
+    gap: 2rem;
 }

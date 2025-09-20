@@ -49,6 +49,11 @@ html, body, #root {
   max-width: 100vw;
 }
 
+ul {
+  padding: 0px;
+  margin: 0px
+}
+
 @font-face {
   font-family: 'Space-Grotesk';
   src: url('./assets/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf');
@@ -59,7 +64,7 @@ html, body, #root {
 }
 
 @media(prefers-color-scheme: dark) {
-  :root{
+  :root {
     background-color: black;
     color: white;
   }

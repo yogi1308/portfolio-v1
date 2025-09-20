@@ -1,15 +1,62 @@
-.scrollTrack {
-  position: sticky;
-  top: 5rem;
-  height: 80vh;
-  width: 6px;
-  background-color: #444;
-  border-radius: 4px;
+.projectCardImage {
+    width: 100%;
+    max-width: 300px; /* More predictable than 30vh */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    object-fit: contain; /* Ensures image doesn't distort */
 }
 
-.scrollThumb {
-  width: 100%;
-  background-color: #4da3ff;
-  border-radius: 4px;
-  transition: height 0.2s ease;
+.cardImgAndDetails {
+    gap: 3rem;
 }
+
+.card {flex: 2;}
+
+/* Updated image wrapper with 3D tilt effect */
+.imageWrapper {
+    max-width: 30vh;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.imageWrapper:hover {
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.projectCardImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optional: Add a subtle glare effect */
+.imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.imageWrapper:hover::before {
+    opacity: 1;
+}
+
