@@ -1,14 +1,13 @@
 .titleButtonContainer {
   gap: 1rem;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
-  border: 1px solid white;
   backdrop-filter: blur(20px);
   z-index: 1000;
   width: max-content;
   left: 50%;
-  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+  transition: all 0.3s ease;
 }
 
 /* Fixed position above 100vh - moves with document */
@@ -18,6 +17,16 @@
   transform: translateX(-50%);
   opacity: 1;
   pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+/* Disappearing state - smooth transition when crossing threshold */
+.disappearing {
+  position: fixed;
+  top: -100px;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
 }
 
@@ -28,7 +37,7 @@
   transform: translateX(-50%);
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+  transition: all 0.3s ease;
 }
 
 /* Reappearing state - slides down from top, fixed to viewport */
@@ -38,17 +47,17 @@
   transform: translateX(-50%);
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+  transition: all 0.3s ease;
 }
 
 /* Hidden state - fixed to viewport */
 .hidden {
   position: fixed;
   top: -100px;
-  transform: translate(-50%, -100px);
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+  transition: all 0.3s ease;
 }
 
 .titleButton {
