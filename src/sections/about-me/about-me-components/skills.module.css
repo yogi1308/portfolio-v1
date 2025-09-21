@@ -48,6 +48,13 @@
 }
 
 @media (max-width: 600px) {
+    .bentoGrid {
+        width: calc(100vw - 4rem);
+        height: calc(100vw - 4rem);
+    }
+}
+
+@media (max-width: 600px) {
     .skillText {
         font-size: 0.6rem;
     }

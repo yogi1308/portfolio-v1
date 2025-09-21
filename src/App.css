@@ -31,9 +31,20 @@ a {
 
 .big-font {font-size: 5rem;}
 
+@media  (max-width: 600px) {
+  .big-font {font-size: 3rem;}
+  .section-margin {margin: 2rem}
+}
+
+@media  (max-width: 375px) {
+  .big-font {font-size: 2rem;}
+}
+
 .cursor {cursor: pointer;}
 
 .align-center {align-items: center;}
+
+.align-end {align-items: end;}
 
 .shine {
   position: relative;

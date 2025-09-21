@@ -40,7 +40,7 @@ export default function ProjectsCards({ project }) {
                 </a>
             </div>
             <div className={`${styles.card} flex-vert`} >
-                <div className={`flex-horiz`} >
+                <div className={`flex-horiz align-end`} >
                     <h3>{project.name}</h3>
                     <p>{project.time}</p>
                 </div>

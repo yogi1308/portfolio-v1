@@ -110,3 +110,21 @@
   color: black;
   cursor: pointer;
 }
+
+@media (max-width: 650px) {
+  .fixedPosition {top: 45%;}
+}
+
+@media (max-width: 600px) {
+  .fixedPosition {top: 42%;}
+}
+
+@media only screen and (max-width: 340px) {
+    .titleButtonContainer {
+        top: 45%;
+    }
+}
+
+@media (max-width: 375px) {
+  .titleButtonContainer {font-size: 0.7rem;}
+}

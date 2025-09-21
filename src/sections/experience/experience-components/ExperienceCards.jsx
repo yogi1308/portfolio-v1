@@ -4,7 +4,7 @@ export default function ExperienceCards({ experience }) {
     return(
         <div className={`${styles.cardImgAndDetails} flex-horiz align-center`}>
             <div className={`${styles.card} flex-vert`} >
-                <div className={`flex-horiz`} >
+                <div className={`flex-horiz align-end`} >
                     <h3>{experience.role}</h3>
                     <p>{experience.time}</p>
                 </div>

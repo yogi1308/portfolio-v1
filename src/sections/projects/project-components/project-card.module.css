@@ -60,3 +60,20 @@
     opacity: 1;
 }
 
+@media (max-width: 500px) {
+    .card {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .card {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .imageWrapper {
+        display: none;
+    }
+}

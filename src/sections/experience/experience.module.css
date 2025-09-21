@@ -10,6 +10,24 @@
     height: max-content;
 }
 
+@media (max-width: 500px) {
+    .progressAndCardsContainer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .progressAndCardsContainer {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .progressContainer {
+        transform: translateX(-20px);
+    }
+}
+
 .experienceCardsContainer {
     gap: 2rem;
 }
