@@ -45,3 +45,24 @@
   z-index: -1; /* This puts it behind everything */
   pointer-events: none; /* Optional: prevents it from blocking clicks */
 }
+
+@media  (max-width: 1080px) {
+  .aboutMeContent {
+    flex-direction: column;
+  }
+}
+
+.cool {
+  display: inline-block;
+  position: relative;
+  animation: up-down 1.5s ease-in-out infinite both;  
+  cursor: pointer;
+}
+
+.cool:hover {
+  animation: up-down 0.5s ease-in-out infinite both;  
+}
+
+@keyframes up-down {
+  50% {transform: translateY(-5px)}
+}

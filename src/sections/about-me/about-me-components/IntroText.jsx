@@ -9,7 +9,7 @@ export default function IntroText() {
                 I am also highly interested in Data Science, Data Visualization, Artificial Intelligence, and Embedded Systems.... I'm no expert here, but I'm curious and wish to learn more about them.
                 <p>
                     When I'm not on my computer, I spend my time swimming, watching basketball,
-                    catching up to the latest shows and movies and reading some manga. My goal is to simply build cool stuff and doing cool things😎
+                    catching up to the latest shows and movies and reading some manga. My goal is to simply build cool stuff and doing cool things<span className={`${styles.cool} cursor`} >😎</span>
                 </p>
             </p>
         </div>
