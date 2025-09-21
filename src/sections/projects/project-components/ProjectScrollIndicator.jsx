@@ -15,7 +15,7 @@ export default function ProjectScrollIndicator({ sectionRef }) {
     const rawProgress = total > 0 ? scrolled / total : 0
     
     // Make scroll bar go slower by reducing the progress rate
-    const slowedProgress = Math.pow(rawProgress, 1.5) // Slower progression
+    const slowedProgress = Math.pow(rawProgress, 1.2) // Slower progression
     setProgress(slowedProgress)
   }
 
