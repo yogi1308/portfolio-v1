@@ -41,7 +41,9 @@ export default function ProjectsCards({ project }) {
             </div>
             <div className={`${styles.card} flex-vert`} >
                 <div className={`flex-horiz align-end`} >
-                    <h3>{project.name}</h3>
+                    <h3><a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content' }}>
+                        {project.name}
+                    </a></h3>
                     <p>{project.time}</p>
                 </div>
                 <ul>

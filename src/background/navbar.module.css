@@ -111,7 +111,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   .fixedPosition {top: 45%;}
 }
 
@@ -123,7 +123,7 @@
     .titleButtonContainer {
         top: 45%;
     }
-}
+} */
 
 @media (max-width: 375px) {
   .titleButtonContainer {font-size: 0.7rem;}
