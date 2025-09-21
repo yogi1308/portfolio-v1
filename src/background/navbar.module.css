@@ -1,17 +1,34 @@
 .titleButtonContainer {
-    gap: 1rem;
-    width: 100%;
-    justify-content: center;
-    position: fixed;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid white;
-    backdrop-filter: blur(20px);
-    z-index: 1000;
-    width: max-content;
-    left: 50%;
-    transform: translate(-50%, 10px);
+  gap: 1rem;
+  justify-content: center;
+  position: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
+
+/* when visible */
+.visible {
+  top: 1%; 
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+/* when hidden (scrolling down) */
+.hidden {
+  top: -100px;   /* move above viewport */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
 
 .titleButton {
     background: transparent;
@@ -46,6 +63,7 @@
     transform: scaleY(0%);
     transition: transform 0.2s ease-out;
     list-style-type: none;
+    background: black;
 }
 
 .dropdown:hover .dropdownContent {
