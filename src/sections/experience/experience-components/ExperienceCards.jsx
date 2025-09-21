@@ -8,7 +8,7 @@ export default function ExperienceCards({ experience }) {
                     <h3>{experience.role}</h3>
                     <p>{experience.time}</p>
                 </div>
-                <p>{experience.where}</p>
+                <p class={`italics`} >{experience.where}</p>
                 <ul>
                     {experience.experienceDetails.map((detail, index) => (
                         <li key={index}>{detail}</li>

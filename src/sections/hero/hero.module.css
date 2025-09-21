@@ -16,12 +16,21 @@
     align-items: center;
 }
 
+.titleName {
+    text-wrap-mode: nowrap; 
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
 .cursor {
-    min-width: 4px;
-    min-height: 100%;
+    display: inline-block;
+    width: 4px;
+    height: 1em;
     border-radius: 10px;
     background-color: var(--accent-color);
-    margin: 20px;
+    margin-left: 8px;
+    vertical-align: baseline;
     animation: blink 1.75s ease-in-out infinite both;
 }
 
@@ -31,8 +40,21 @@
     to {opacity: 0%}
 }
 
-.titleName {text-wrap-mode: nowrap;}
-
 .titleButtonContainer {
   transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 650px) {
+    .titleName {
+        text-wrap-mode: wrap;
+        line-height: 1.2;
+    }
+    .nameContainer {transform: translateY(-20%);}
+}
+
+@media only screen and (max-width: 340px) {
+    .titleName {
+        font-size: 3.5rem;
+    }
+    .nameContainer > p {text-align: center;}
 }
