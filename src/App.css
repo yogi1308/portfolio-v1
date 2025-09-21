@@ -50,6 +50,10 @@ a {
   }
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
   display: none;
 }
@@ -57,3 +61,4 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
