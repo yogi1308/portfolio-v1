@@ -9,7 +9,7 @@ export default function Projects() {
   const sectionRef = useRef(null)
   const [imgWidth, setWidth] = useState(0)
   useEffect(() => {
-    const img = document.querySelector("img")
+    const img = document.querySelector(".refImage")
     if (img) {
       const updateWidth = () => setWidth(img.width)
       updateWidth()

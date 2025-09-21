@@ -36,7 +36,7 @@ export default function ProjectsCards({ project }) {
                 onMouseLeave={handleMouseLeave}
             >
                 <a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content' }}>
-                    <img src={project.thumbnail} className={styles.projectCardImage} />
+                    <img src={project.thumbnail} className={`${styles.projectCardImage} refImage`} />
                 </a>
             </div>
             <div className={`${styles.card} flex-vert`} >

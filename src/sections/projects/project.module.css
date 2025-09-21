@@ -40,8 +40,6 @@
 }
 
 .viewMore {
-    width: 100%;
-    max-width: 300px;
     transform: translateY(2.5rem);
     background: black;
 }
