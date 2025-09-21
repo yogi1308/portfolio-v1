@@ -3,7 +3,7 @@ import DotBg from "../../background/DotBg"
 
 export default function Contact() {
     return(
-        <div className={`section-margin ${styles.contactSection}`}>
+        <div className={`section-margin ${styles.contactSection}`} id="contactMe">
             <DotBg />
             <h2 className={`big-font`} >
                 Contact Me

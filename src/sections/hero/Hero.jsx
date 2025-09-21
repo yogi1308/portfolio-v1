@@ -4,7 +4,7 @@ import Title from "./hero-components/Title"
 
 export default function Hero() {
     return(
-        <div className={`${styles.heroSection}`} >
+        <div className={`${styles.heroSection}`} id="landingPage" >
             <DotBg />
             <Title/>
         </div>

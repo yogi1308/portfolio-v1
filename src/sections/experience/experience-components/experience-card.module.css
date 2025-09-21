@@ -1,0 +1,5 @@
+.cardImgAndDetails {
+    gap: 3rem;
+}
+
+.card {flex: 2;}

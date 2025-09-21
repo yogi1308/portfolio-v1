@@ -1,0 +1,65 @@
+.titleButtonContainer {
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    width: max-content;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.titleButton {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.titleButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownContent {
+    position: absolute;
+    border: 1px solid white;
+    width: 100%;
+    top: 3rem;
+    border-radius: 10px;
+    padding: 10px 5px;
+    transform-origin: top;
+    transform: scaleY(0%);
+    transition: transform 0.2s ease-out;
+    list-style-type: none;
+}
+
+.dropdown:hover .dropdownContent {
+    transform: scaleY(100%);
+}
+
+.dropdownContent > li {
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+    padding: 5px;
+}
+
+.dropdownContent > li:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}

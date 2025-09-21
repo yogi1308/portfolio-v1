@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react"
 import styles from './project.module.css'
 import { projectsContent } from "./project-section-content"
 import ProjectsCards from "./project-components/Project-cards"
-import ProjectScrollIndicator from "./project-components/ProjectScrollIndicator"
+import ScrollIndicator from "../../background/ScrollIndicator"
 import FloatingParticlesBackground from "../../background/ParticleBg"
 
 export default function Projects() {
@@ -24,10 +24,10 @@ export default function Projects() {
   return (
     <div ref={sectionRef} className={`${styles.projectSection} section-margin`}>
         <FloatingParticlesBackground pointerTargetRef={sectionRef} className={`${styles.floatingParticlesBackground}`}/>
-        <h2 className={`${styles.projectSectionTitle} big-font`}>Projects</h2>
+        <h2 className={`${styles.projectSectionTitle} big-font`} id="projects">Projects</h2>
         <div className={`${styles.progressAndCardsContainer} `}>
             <div className={`${styles.progressContainer} `}>
-                <ProjectScrollIndicator sectionRef={sectionRef} />
+                <ScrollIndicator sectionRef={sectionRef} />
             </div>
             <div className={`${styles.projectCardsContainer} flex-vert`}>
                 {projectsContent.map((project, index) => (

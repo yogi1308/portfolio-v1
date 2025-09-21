@@ -12,23 +12,6 @@
     align-items: center;
 }
 
-.titleButtonContainer {
-    gap: 1rem;
-    width: 100%;
-    justify-content: center;
-}
-
-.titleButton {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease-in;
-}
-
 .nameContainer {
     align-items: center;
 }
@@ -50,3 +33,16 @@
 
 .titleName {text-wrap-mode: nowrap;}
 
+.titleButtonContainer {
+  transition: all 0.2s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;        /* make it stretch */
+  background: white;  /* so text stays visible */
+  z-index: 1000;
+  transform: translateY(100px)
+}

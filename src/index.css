@@ -43,6 +43,14 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  font-style: normal !important;
+}
+
 html, body, #root {
   overflow-x: hidden;
   width: 100%;
