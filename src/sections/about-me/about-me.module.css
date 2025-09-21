@@ -24,3 +24,7 @@
   50% { transform: rotate(18deg); }
   100% { transform: rotate(-12deg); }
 }
+
+.aboutMeContent{
+    gap: 1.5rem
+}

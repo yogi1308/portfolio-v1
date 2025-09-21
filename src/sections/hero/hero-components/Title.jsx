@@ -23,7 +23,6 @@ export default function Title() {
             </h1>
             <div className={`${styles.titleButtonContainer} flex-horiz`}>
                 <button className={`${styles.titleButton}`} >About Me </button>
-                <button className={`${styles.titleButton}`} >View My Work</button>
                 <button className={`${styles.titleButton}`} >Download CV/Resume </button>
                 <button className={`${styles.titleButton}`} >Contact Me </button>
             </div>

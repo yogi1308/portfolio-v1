@@ -1,0 +1,55 @@
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 8px;
+    width: 500px;
+    height: 500px; /* Forces square shape */
+    margin: 0 auto;
+}
+
+.bentoSection {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(25, 25, 25, 0.6), rgba(5, 5, 5, 0.9));
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px;
+}
+
+.bentoSection:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.horiz2 { grid-column: span 2; }
+.horiz3 { grid-column: span 3; }
+.vert2 { grid-row: span 2; }
+.vert3 { grid-row: span 3; }
+
+/* Add visual variety without breaking the square */
+.bentoSection:nth-child(odd) {
+    background: linear-gradient(225deg, rgba(30, 30, 30, 0.6), rgba(8, 8, 8, 0.9));
+}
+
+.bentoSection:nth-child(4n) {
+    background: linear-gradient(45deg, rgba(20, 25, 30, 0.6), rgba(5, 8, 12, 0.9));
+}
+
+/* Responsive square */
+@media (max-width: 768px) {
+    .bentoGrid {
+        width: 90vmin;
+        height: 90vmin;
+    }
+}
+
+.bentoSection img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
