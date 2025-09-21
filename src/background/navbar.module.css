@@ -1,7 +1,6 @@
 .titleButtonContainer {
   gap: 1rem;
   justify-content: center;
-  position: fixed;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid white;
@@ -9,75 +8,96 @@
   z-index: 1000;
   width: max-content;
   left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
 }
 
-/* when visible */
-.visible {
-  top: 1%; 
+/* Fixed position above 100vh - moves with document */
+.fixedPosition {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
   opacity: 1;
   pointer-events: auto;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
 }
 
-/* when hidden (scrolling down) */
+/* Normal visible state - fixed to viewport below 100vh */
+.visible {
+  position: fixed;
+  top: 1%;
+  transform: translateX(-50%);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+}
+
+/* Reappearing state - slides down from top, fixed to viewport */
+.reappearing {
+  position: fixed;
+  top: 1%;
+  transform: translateX(-50%);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
+}
+
+/* Hidden state - fixed to viewport */
 .hidden {
-  top: -100px;   /* move above viewport */
+  position: fixed;
+  top: -100px;
+  transform: translate(-50%, -100px);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, position 0.3s ease 1.0s;
 }
 
-
 .titleButton {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease-in;
-    border-radius: 10px;
-    transition: all 0.3s ease-in;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+  border-radius: 10px;
 }
 
 .titleButton:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdownContent {
-    position: absolute;
-    border: 1px solid white;
-    width: 100%;
-    top: 3rem;
-    border-radius: 10px;
-    padding: 10px 5px;
-    transform-origin: top;
-    transform: scaleY(0%);
-    transition: transform 0.2s ease-out;
-    list-style-type: none;
-    background: black;
+  position: absolute;
+  border: 1px solid white;
+  width: 100%;
+  top: 3rem;
+  border-radius: 10px;
+  padding: 10px 5px;
+  transform-origin: top;
+  transform: scaleY(0%);
+  transition: transform 0.2s ease-out;
+  list-style-type: none;
+  background: black;
 }
 
 .dropdown:hover .dropdownContent {
-    transform: scaleY(100%);
+  transform: scaleY(100%);
 }
 
 .dropdownContent > li {
-    border-radius: 5px;
-    transition: all 0.3s ease-in;
-    padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+  padding: 5px;
 }
 
 .dropdownContent > li:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
