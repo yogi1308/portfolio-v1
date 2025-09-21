@@ -49,3 +49,11 @@ a {
     background-position: 200% center;
   }
 }
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

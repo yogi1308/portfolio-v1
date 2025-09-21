@@ -22,9 +22,21 @@ export default function Title() {
                 <p className={`${styles.titleName} big-font flex-horiz`} > {name} <div className={`${styles.cursor}`} ></div> </p>
             </h1>
             <div className={`${styles.titleButtonContainer} flex-horiz`}>
-                <button className={`${styles.titleButton}`} >About Me </button>
-                <button className={`${styles.titleButton}`} >Download CV/Resume </button>
-                <button className={`${styles.titleButton}`} >Contact Me </button>
+                <div>
+                    <button className={`${styles.titleButton} dropdown`} >Navigation ▾</button>
+                    <div className={`dropdown-content`} >
+                        <p>Landing Page</p>
+                        <p>About Me</p>
+                        <p>Experience</p>
+                        <p>Projects</p>
+                        <p>Contact Me</p>
+                    </div>
+                </div>
+                <button className={`${styles.titleButton} dropdown`} >Download CV/Resume ▾ </button>
+                <div className={`dropdown-content`} >
+                        <p>Resume</p>
+                        <p>Curriculum Vitae (CV)</p>
+                    </div>
             </div>
         </div>
     )
