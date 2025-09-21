@@ -85,12 +85,27 @@ button:hover {
 
 :root {
   font-family: 'Space-Grotesk', 'Calibri', Arial, Helvetica, sans-serif;
-}
-
-@media(prefers-color-scheme: dark) {
-  :root {
-    background-color: black;
+  background-color: black;
     color: white;
     --accent-color: #3b82f6;
-  }
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
 }
