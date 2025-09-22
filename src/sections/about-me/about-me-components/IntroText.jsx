@@ -10,7 +10,7 @@ export default function IntroText() {
             </p>
             <p>
                 When I'm not on my computer, I spend my time swimming, watching basketball,
-                catching up to the latest shows and movies and reading some manga. My goal is to simply build cool stuff and doing cool things<span className={`${styles.cool} cursor`} >😎</span>
+                catching up to the latest shows and movies and reading some manga. My goal is to simply build cool stuff and do cool things<span className={`${styles.cool} cursor`} >😎</span>
             </p>
         </div>
     )

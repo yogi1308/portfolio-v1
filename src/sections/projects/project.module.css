@@ -42,6 +42,7 @@
 .viewMore {
     transform: translateY(2.5rem);
     background: black;
+    min-width: fit-content;
 }
 
 @media (max-width: 650px) {

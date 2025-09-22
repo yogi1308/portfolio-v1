@@ -69,10 +69,10 @@ export let projectsContent = [
         type: "Personal Project",
         thumbnail: battleshipThumbnail,
         projectDetails: [
-            "Designed and implemented a classic Battleship game with both single-player (vs. AI) and two-player modes using JavaScript, HTML, and CSS",
+            "Designed and implemented a classic Battleship game with both single-player (vs. Computer Algorithm) and two-player modes using JavaScript, HTML, and CSS",
             "Engineered a modular game architecture featuring ship placement, turn-based attack logic, and win/loss detection.",
             "Developed intuitive drag-and-drop ship placement and orientation controls, enhancing user experience and game strategy.",
-            "Built a custom AI opponent leveraging pattern-based attack logic and memory for realistic gameplay against the computer.",
+            "Built a custom computer algorithm opponent leveraging pattern-based attack logic and memory for realistic gameplay against the computer.",
             "Applied advanced DOM manipulation for real-time UI updates, including rematch functionality and seamless transition between game states.",
             "Implemented responsive interface with dynamic feedback for hits, misses, and sunk ships, ensuring clear in-game communication.",
         ]
