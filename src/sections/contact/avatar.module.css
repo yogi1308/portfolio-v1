@@ -1,0 +1,32 @@
+.avatarContainer {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1rem;
+}
+
+.avatarGuy {
+    font-size: 5rem;
+}
+
+.bannerHandle {
+    position: absolute;
+    bottom: 6.5rem;
+    right: 3.4rem;
+}
+
+.avatarBannerContainer {
+    position: absolute;
+    bottom: 15.5rem;
+    right: 1rem;
+    border: 2px dashed white;
+    padding: 10px;
+    min-width: 80px;
+}
+
+@media (max-width: 1000px) {
+    .avatarContainer {
+        transform: scale(0.8);
+        right: -2rem;
+        border: 1px solid white
+    }
+}

@@ -29,7 +29,7 @@ textarea {
 
 @media  (max-width: 800px) {
     .form > * {
-        width: 100% !important;
+        width: 100%;
     }
     .contactSection canvas {
         position: absolute;
@@ -50,4 +50,13 @@ textarea {
     .form {
         font-size: 0.5rem;
     }
+}
+
+.contactSection {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.avatarBannerContainer > div.avatarBannerMessage {
+    margin: 10px 0px;
 }

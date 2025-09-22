@@ -24,21 +24,8 @@
     display: inline-block;
 }
 
-.cursor {
-    display: inline-block;
-    width: 4px;
-    height: 0.8em;
-    border-radius: 10px;
-    background-color: var(--accent-color);
-    margin-left: 8px;
-    vertical-align: baseline;
-    animation: blink 1.75s ease-in-out infinite both;
-}
-
-@keyframes blink {
-    from {opacity: 0%;}
-    50% {opacity: 100%;}
-    to {opacity: 0%}
+.hello {
+    white-space: nowrap;
 }
 
 .titleButtonContainer {
@@ -76,4 +63,11 @@
     .title {
         top: calc(50% - 10px - 5rem);
     }
+}
+
+span.Typewriter__wrapper::after {
+    content: ' |';
+    color: var(--accent-color);
+    min-width: 2px !important;
+
 }

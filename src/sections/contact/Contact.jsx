@@ -1,5 +1,6 @@
 import styles from './contact.module.css'
 import DotBg from "../../background/DotBg"
+import AvatarMessage from "./AvatarMessages"
 import { useState } from 'react'
 
 export default function Contact() {
@@ -32,8 +33,8 @@ export default function Contact() {
             <h2 className={`big-font`} >
                 Contact Me
             </h2>
-            <form 
-                action="https://formspree.io/f/mpwyazew" 
+            <form
+                action="https://formspree.io/f/mpwyazew"
                 method="POST"
                 className={`${styles.form} flex-vert`}
                 onSubmit={handleSubmit}
@@ -43,27 +44,27 @@ export default function Contact() {
                 
                 <div>
                     <p>Name</p>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         name="name"
-                        placeholder='John Doe' 
-                        required 
+                        placeholder='John Doe'
+                        required
                     />
                 </div>
                 <div>
                     <p>Email</p>
-                    <input 
-                        type="email" 
+                    <input
+                        type="email"
                         name="email"
-                        placeholder='example@gmail.com' 
-                        required 
+                        placeholder='example@gmail.com'
+                        required
                     />
                 </div>
                 <div>
                     <p>Message</p>
-                    <textarea 
+                    <textarea
                         name="message"
-                        placeholder='Enter your message here' 
+                        placeholder='Enter your message here'
                         required
                     />
                 </div>
@@ -71,6 +72,7 @@ export default function Contact() {
                     {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
             </form>
+            < AvatarMessage />
         </div>
     )
 }
