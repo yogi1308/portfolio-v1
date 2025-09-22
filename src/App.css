@@ -91,3 +91,9 @@ span.my-custom-cursor {
     50% {opacity: 100%;}
     to {opacity: 0%}
 }
+
+@media (max-width: 800px) {
+    #thatsMeAndAvatar {
+        font-size: 0.8rem;
+    }
+}

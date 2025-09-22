@@ -73,6 +73,7 @@ export default function Contact() {
                 </button>
             </form>
             < AvatarMessage />
+            <div className={`${styles.avatarBox}`} ></div>
         </div>
     )
 }

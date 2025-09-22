@@ -19,18 +19,19 @@ textarea {
     overflow: hidden;
 }
 
-.contactSection canvas {
+/* .contactSection canvas {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: -1;
     transform: translateX(-200px);
-}
+} */
 
 @media  (max-width: 800px) {
-    .form > * {
+    /* .form > * {
         width: 100%;
-    }
+    } */
+
     .contactSection canvas {
         position: absolute;
         inset: 0;

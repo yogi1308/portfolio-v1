@@ -27,6 +27,123 @@
     .avatarContainer {
         transform: scale(0.8);
         right: -2rem;
-        border: 1px solid white
+    }
+}
+
+@media (max-width: 800px) {
+    .avatarBannerContainer {
+        min-width: 40px;
+        width: calc(100% - 2rem);
+    }
+    #thatsMeAndAvatar {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .avatarGuy {
+        font-size: 4rem;
+    }
+    .bannerHandle {
+        bottom: 5.5rem;
+        right: 2.5rem;
+    }
+    .avatarBannerContainer {
+        bottom: 14.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .avatarBannerContainer {
+        width: calc(100% - 2.5rem);
+    }
+    .avatarGuy {
+        font-size: 3rem;
+    }
+    .avatarContainer {
+        bottom: -1rem;
+        right: -1.5rem;
+    }
+    .avatarBannerContainer {
+        bottom: 13.5rem;
+    }
+    .bannerHandle {
+        bottom: 4rem;
+        right: 1.85rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .thatsMe {
+        display: none;
+    }
+    .avatarContainer {
+        position: absolute;
+        right: 2.5rem;
+    }
+    .avatarBannerContainer {
+        width: 230%;
+        right: -80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .avatarContainer {
+        transform: scale(0.7);
+        right: 8%
+    }
+}
+
+@media (max-width: 450px) {
+    .avatarContainer {
+        right: 2.5%
+    }
+    .avatarBannerContainer {
+        width: 200%;
+        right: -33%;
+    }
+    .bannerHandle {
+        right: 46%
+    }
+}
+
+@media (max-width: 410px) {
+    .avatarContainer {
+        transform: scale(0.6);
+        right: 0rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .avatarContainer {
+        transform: scale(0.5);
+        right: -0.25rem;
+    }
+    .avatarBannerContainer {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .avatarContainer {
+        transform: scale(0.4);
+        right: -0.5rem;
+        bottom: -01.5rem;
+    }
+    .avatarBannerContainer {
+        font-size: 1.5rem;
+        width: 250%;
+    }
+}
+
+@media (max-width: 300px) {
+    .avatarContainer {
+        transform: scale(0.3);
+        right: -1.0rem;
+        bottom: -01.5rem;
+    }
+    .avatarBannerContainer {
+        font-size: 2.0rem;
+        width: 250%;
     }
 }

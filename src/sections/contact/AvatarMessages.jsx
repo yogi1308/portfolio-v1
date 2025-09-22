@@ -80,8 +80,8 @@ export default function AvatarMessage() {
           <div>|</div>
         </div>
       </div>
-      <div>
-        That's Me {'--------⟩'}
+      <div classname={`${styles.thatsMeAndAvatar}`} id={'thatsMeAndAvatar'} >
+        <span className={styles.thatsMe}>That's Me {'--------⟩'}</span>
         <span className={styles.avatarGuy}>🧑‍💻</span>
       </div>
     </div>
