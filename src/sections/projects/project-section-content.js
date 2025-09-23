@@ -37,7 +37,7 @@ export let projectsContent = [
     },
     {
         name: "Memory Card Game",
-        projectLink: "https://sunny-fudge-81c254.netlify.app",
+        projectLink: "https://chipper-fox-9c608c.netlify.app",
         time: "June 2025",
         type: "Personal Project",
         thumbnail: memoryCardGameThumbanil,
