@@ -6,6 +6,7 @@ import battleshipThumbnail from '../../assets/images/battleship-thumbnail.png'
 import toDoThumbnail from '../../assets/images/to-do-thumbnail.png'
 import libraryThumbnail from '../../assets/images/library-thumbnail.png'
 import restaurantPageThumbnail from '../../assets/images/restaurant-page-thumbnail.png'
+import libraryInventoryApp from '../../assets/images/library-inventory-app.png'
 
 export let projectsContent = [
     {
@@ -19,6 +20,18 @@ export let projectsContent = [
             "Utilized persistent cart storage via localStorage, ensuring user selections are retained across sessions.",
             "Integrated a custom theming solution, supporting both light and dark modes with smooth transitions across the app.",
             "Developed a user-centric interface including animated cart side-panel, overlay effects, and real-time total calculation, enhancing usability on both desktop and mobile devices.",
+        ]
+    },
+    {
+        name: "Library Inventory Application",
+        projectLink: "https://inventory-application-2-o8ru.onrender.com",
+        time: "October 2025",
+        type: "Personal Project",
+        thumbnail: libraryInventoryApp,
+        projectDetails: [
+            "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
+            "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
+            "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
         ]
     },
     {
