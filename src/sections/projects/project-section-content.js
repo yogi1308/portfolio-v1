@@ -120,7 +120,7 @@ export let projectsContent = [
     {
         name: "Library",
         projectLink: "https://yogi1308.github.io/library/",
-        time: "Dec 2025",
+        time: "Dec 2024",
         type: "Personal Project",
         thumbnail: libraryThumbnail,
         projectDetails: [
