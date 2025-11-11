@@ -7,8 +7,22 @@ import toDoThumbnail from '../../assets/images/to-do-thumbnail.png'
 import libraryThumbnail from '../../assets/images/library-thumbnail.png'
 import restaurantPageThumbnail from '../../assets/images/restaurant-page-thumbnail.png'
 import libraryInventoryApp from '../../assets/images/library-inventory-app.png'
+import cliArtThumbnail from '../../assets/images/cli-art-thumbnail.png'
 
 export let projectsContent = [
+    {
+        name: "CLI Art",
+        projectLink: "https://github.com/yogi1308/cli-art",
+        time: "November 2025",
+        type: "Personal Project",
+        thumbnail: cliArtThumbnail,
+        projectDetails: [
+            "Developed a Python command-line tool to convert images from local files or web URLs into full-color ASCII art, with argparse to provide users with full control over output width, color modes, brightness/contrast, and inversion.",
+            "Used Pillows library for Image Processing, Colorama to implement multiple color modes, shutil for terminal window data, requests for fetching image from url and argparse to process arguments passed by user using flags.",
+            "Packaged the final script into standalone executables for both Windows (.exe), WSL and similar Ubuntu-based Linux systems using PyInstaller and published them on GitHub Releases."
+
+        ]
+    },
     {
         name: "Sneaker Shopping Cart",
         projectLink: "https://lustrous-arithmetic-5d279a.netlify.app",
