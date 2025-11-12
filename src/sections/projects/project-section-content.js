@@ -38,7 +38,7 @@ export let projectsContent = [
     },
     {
         name: "Library Inventory Application",
-        projectLink: "https://inventory-application-2-o8ru.onrender.com",
+        projectLink: "https://inventory-application-ivory.vercel.app",
         time: "October 2025",
         type: "Personal Project",
         thumbnail: libraryInventoryApp,
