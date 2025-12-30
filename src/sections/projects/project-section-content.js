@@ -8,8 +8,22 @@ import libraryThumbnail from '../../assets/images/library-thumbnail.png'
 import restaurantPageThumbnail from '../../assets/images/restaurant-page-thumbnail.png'
 import libraryInventoryApp from '../../assets/images/library-inventory-app.png'
 import cliArtThumbnail from '../../assets/images/cli-art-thumbnail.png'
+import basicDriveThumbnail from '../../assets/images/basic-drive-thumbnail.png'
 
 export let projectsContent = [
+    {
+        name: "Basic Google Drive",
+        projectLink: "https://file-uploader-orpin.vercel.app",
+        time: "December 2025",
+        type: "Personal Project",
+        thumbnail: basicDriveThumbnail,
+        projectDetails: [
+            "Developed a full-stack file storage application using Node.js, Express, and PostgreSQL (via Prisma ORM) to efficiently manage user data and complex file hierarchies.",
+            "Integrated Cloudinary API for scalable cloud storage, enabling real-time uploads, folder management, and automatic categorization of assets into photos, videos, and documents.",
+            "Implemented secure user authentication with Passport.js and deployed the application on a serverless architecture using Vercel and Neon for high availability and performance."
+
+        ]
+    },
     {
         name: "CLI Art",
         projectLink: "https://github.com/yogi1308/cli-art",
@@ -21,6 +35,18 @@ export let projectsContent = [
             "Used Pillows library for Image Processing, Colorama to implement multiple color modes, shutil for terminal window data, requests for fetching image from url and argparse to process arguments passed by user using flags.",
             "Packaged the final script into standalone executables for both Windows (.exe), WSL and similar Ubuntu-based Linux systems using PyInstaller and published them on GitHub Releases."
 
+        ]
+    },   
+    {
+        name: "Library Inventory Application",
+        projectLink: "https://inventory-application-ivory.vercel.app",
+        time: "October 2025",
+        type: "Personal Project",
+        thumbnail: libraryInventoryApp,
+        projectDetails: [
+            "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
+            "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
+            "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
         ]
     },
     {
@@ -34,18 +60,6 @@ export let projectsContent = [
             "Utilized persistent cart storage via localStorage, ensuring user selections are retained across sessions.",
             "Integrated a custom theming solution, supporting both light and dark modes with smooth transitions across the app.",
             "Developed a user-centric interface including animated cart side-panel, overlay effects, and real-time total calculation, enhancing usability on both desktop and mobile devices.",
-        ]
-    },
-    {
-        name: "Library Inventory Application",
-        projectLink: "https://inventory-application-ivory.vercel.app",
-        time: "October 2025",
-        type: "Personal Project",
-        thumbnail: libraryInventoryApp,
-        projectDetails: [
-            "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
-            "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
-            "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
         ]
     },
     {
