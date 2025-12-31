@@ -21,13 +21,24 @@ export let experienceContent = [
         ]
     },
     {
-        role: "Student Council Member",
-        where: "Corvuss American Academy",
-        time: "August 2023 - May 2023",
+        role: "Meeting Lead",
+        where: "Saayam for All, EPICS ASU",
+        time: "August 2024 - December 2024",
         experienceDetails: [
-            "Handled logistics, Coordination, Planning and execution of a major inter-school sports tournament, hosting over 100 participants",
-            "Planned monthly cultural events and activities for the students, engaging 40-50 on-campus students",
-            "Represented student body interests in school governance meetings, advocating for student-centric initiatives"
+            "Planned, organized, and facilitated weekly team meetings and created detailed meeting agendas.",
+            "Documented meetings, coordinated schedules, tracked action items, and supported project planning to ensure timely deliverables.",
+            "Developed and maintained a centralized repository for meeting notes, action items, and project updates.",
+            "Monitored progress on action items and provided regular updates to the team and project leads."
         ]
     },
+    // {
+    //     role: "Student Council Member",
+    //     where: "Corvuss American Academy",
+    //     time: "August 2023 - May 2023",
+    //     experienceDetails: [
+    //         "Handled logistics, Coordination, Planning and execution of a major inter-school sports tournament, hosting over 100 participants",
+    //         "Planned monthly cultural events and activities for the students, engaging 40-50 on-campus students",
+    //         "Represented student body interests in school governance meetings, advocating for student-centric initiatives"
+    //     ]
+    // },
 ]

@@ -9,6 +9,7 @@ import restaurantPageThumbnail from '../../assets/images/restaurant-page-thumbna
 import libraryInventoryApp from '../../assets/images/library-inventory-app.png'
 import cliArtThumbnail from '../../assets/images/cli-art-thumbnail.png'
 import basicDriveThumbnail from '../../assets/images/basic-drive-thumbnail.png'
+import shellScriptThumbnail from '../../assets/images/git-gemini-shell-script.png'
 
 export let projectsContent = [
     {
@@ -22,6 +23,18 @@ export let projectsContent = [
             "Integrated Cloudinary API for scalable cloud storage, enabling real-time uploads, folder management, and automatic categorization of assets into photos, videos, and documents.",
             "Implemented secure user authentication with Passport.js and deployed the application on a serverless architecture using Vercel and Neon for high availability and performance."
 
+        ]
+    },
+    {
+        name: "Git Gemini Automation Shell Script",
+        projectLink: "https://github.com/yogi1308/shell-scripts",
+        time: "November 2025",
+        type: "Personal Project",
+        thumbnail: shellScriptThumbnail,
+        projectDetails: [
+            "Wrote a shell script that automates git stage commit and push workflow by sending diffs to the Gemini CLI tool to generate context-aware commit messages to the staged files and pushing them.",
+            "Integrated 60-second API timeouts and diff size validation to handle large changesets gracefully with manual fallback options.",
+            "Implemented comprehensive error handling for API timeouts, authentication failures, and network issues with user-friendly troubleshooting messages."
         ]
     },
     {
@@ -76,33 +89,33 @@ export let projectsContent = [
             "Ensured accessibility and cross-browser compatibility through semantic HTML and extensive CSS styling.",
         ]
     },
-    {
-        name: "Memory Card Game",
-        projectLink: "https://chipper-fox-9c608c.netlify.app",
-        time: "June 2025",
-        type: "Personal Project",
-        thumbnail: memoryCardGameThumbanil,
-        projectDetails: [
-            "Designed and developed an interactive Pokémon-themed memory card game using React and Vite, providing an engaging and visually dynamic user experience.",
-            "Implemented stateful game logic to track user selections, scores, and best scores, preventing repeated card selections and ensuring fair gameplay.",
-            "Applied advanced CSS animations and responsive layouts to create a visually appealing, mobile-friendly interface.",
-            "Integrated modular React components for game screens, help overlays, and scoreboards, promoting code reusability and maintainability.",
-            "Utilized asynchronous JavaScript to efficiently preload game assets (Pokémon images) for smooth gameplay transitions.",
-        ]
-    },
-    {
-        name: "Weather App",
-        projectLink: "https://yogi1308.github.io/weather-app",
-        time: "March 2025",
-        type: "Personal Project",
-        thumbnail: weatherAppThmbnail,
-        projectDetails: [
-            "Developed a full-featured weather application using JavaScript that provides real-time weather data and air quality index(AQI) for user-selected or geolocated locations.",
-            "Integrated third-party weather APIs (Visual Crossing) to fetch detailed forecasts, including current, hourly (up to 24 hours), and daily (up to 14 days) weather data.",
-            "Implemented user experience enhancements such as dynamic background and weather images based on current conditions and time of day.",
-            "Added support for both metric and imperial units, with persistent user preferences using localStorage."
-        ]
-    }, 
+    // {
+    //     name: "Memory Card Game",
+    //     projectLink: "https://chipper-fox-9c608c.netlify.app",
+    //     time: "June 2025",
+    //     type: "Personal Project",
+    //     thumbnail: memoryCardGameThumbanil,
+    //     projectDetails: [
+    //         "Designed and developed an interactive Pokémon-themed memory card game using React and Vite, providing an engaging and visually dynamic user experience.",
+    //         "Implemented stateful game logic to track user selections, scores, and best scores, preventing repeated card selections and ensuring fair gameplay.",
+    //         "Applied advanced CSS animations and responsive layouts to create a visually appealing, mobile-friendly interface.",
+    //         "Integrated modular React components for game screens, help overlays, and scoreboards, promoting code reusability and maintainability.",
+    //         "Utilized asynchronous JavaScript to efficiently preload game assets (Pokémon images) for smooth gameplay transitions.",
+    //     ]
+    // },
+    // {
+    //     name: "Weather App",
+    //     projectLink: "https://yogi1308.github.io/weather-app",
+    //     time: "March 2025",
+    //     type: "Personal Project",
+    //     thumbnail: weatherAppThmbnail,
+    //     projectDetails: [
+    //         "Developed a full-featured weather application using JavaScript that provides real-time weather data and air quality index(AQI) for user-selected or geolocated locations.",
+    //         "Integrated third-party weather APIs (Visual Crossing) to fetch detailed forecasts, including current, hourly (up to 24 hours), and daily (up to 14 days) weather data.",
+    //         "Implemented user experience enhancements such as dynamic background and weather images based on current conditions and time of day.",
+    //         "Added support for both metric and imperial units, with persistent user preferences using localStorage."
+    //     ]
+    // }, 
     {
         name: "Battleship",
         projectLink: "https://yogi1308.github.io/battleship/",
@@ -118,44 +131,44 @@ export let projectsContent = [
             "Implemented responsive interface with dynamic feedback for hits, misses, and sunk ships, ensuring clear in-game communication.",
         ]
     },
-    {
-        name: "To-do List",
-        projectLink: "https://yogi1308.github.io/to-do-list/",
-        time: "March 2025",
-        type: "Personal Project",
-        thumbnail: toDoThumbnail,
-        projectDetails: [
-            "Designed and implemented a JavaScript-based to-do list application, focusing on intuitive task management and seamless user experience.",
-            "Applied best practices in front-end development to enable real-time task addition, editing, and deletion.",
-            "Leveraged local storage to persist user tasks across sessions, ensuring data reliability and user convenience.",
-            "Developed responsive layouts to provide a consistent interface across desktop and mobile devices.",
-        ]
-    },
-    {
-        name: "Restaurant page",
-        projectLink: "https://yogi1308.github.io/restaurant-page/",
-        time: "Jan 2025",
-        type: "Personal Project",
-        thumbnail: restaurantPageThumbnail,
-        projectDetails: [
-            "Developed a multi-page restaurant website using modular vanilla JavaScript, enabling dynamic content switching between homepage, menu, and contact sections without page reloads.",
-            "Designed and implemented a visually appealing UI with custom CSS, including responsive layouts, custom fonts, and SVG graphics to enhance user experience.",
-            "Structured the codebase with separation of concerns, utilizing distinct modules for menu data, homepage, contact information, and navigation.",
-            "Leveraged Webpack for efficient module bundling and asset management, streamlining the development workflow.",
-            "Integrated a custom menu system with dynamic population from data modules, allowing easy updates and scalability of menu items.",
-        ]
-    },
-    {
-        name: "Library",
-        projectLink: "https://yogi1308.github.io/library/",
-        time: "Dec 2024",
-        type: "Personal Project",
-        thumbnail: libraryThumbnail,
-        projectDetails: [
-            "Engineered a web-based library management system using JavaScript, HTML, and CSS, supporting efficient cataloging and user interactions.",
-            "Implemented dynamic UI components and interactive features to enhance the user experience in managing book records.",
-            "Applied core web development principles to develop a responsive and accessible multi-page application.",
-            "Optimized code structure for maintainability and scalability in a collaborative public repository.",
-        ]
-    },
+    // {
+    //     name: "To-do List",
+    //     projectLink: "https://yogi1308.github.io/to-do-list/",
+    //     time: "March 2025",
+    //     type: "Personal Project",
+    //     thumbnail: toDoThumbnail,
+    //     projectDetails: [
+    //         "Designed and implemented a JavaScript-based to-do list application, focusing on intuitive task management and seamless user experience.",
+    //         "Applied best practices in front-end development to enable real-time task addition, editing, and deletion.",
+    //         "Leveraged local storage to persist user tasks across sessions, ensuring data reliability and user convenience.",
+    //         "Developed responsive layouts to provide a consistent interface across desktop and mobile devices.",
+    //     ]
+    // },
+    // {
+    //     name: "Restaurant page",
+    //     projectLink: "https://yogi1308.github.io/restaurant-page/",
+    //     time: "Jan 2025",
+    //     type: "Personal Project",
+    //     thumbnail: restaurantPageThumbnail,
+    //     projectDetails: [
+    //         "Developed a multi-page restaurant website using modular vanilla JavaScript, enabling dynamic content switching between homepage, menu, and contact sections without page reloads.",
+    //         "Designed and implemented a visually appealing UI with custom CSS, including responsive layouts, custom fonts, and SVG graphics to enhance user experience.",
+    //         "Structured the codebase with separation of concerns, utilizing distinct modules for menu data, homepage, contact information, and navigation.",
+    //         "Leveraged Webpack for efficient module bundling and asset management, streamlining the development workflow.",
+    //         "Integrated a custom menu system with dynamic population from data modules, allowing easy updates and scalability of menu items.",
+    //     ]
+    // },
+    // {
+    //     name: "Library",
+    //     projectLink: "https://yogi1308.github.io/library/",
+    //     time: "Dec 2024",
+    //     type: "Personal Project",
+    //     thumbnail: libraryThumbnail,
+    //     projectDetails: [
+    //         "Engineered a web-based library management system using JavaScript, HTML, and CSS, supporting efficient cataloging and user interactions.",
+    //         "Implemented dynamic UI components and interactive features to enhance the user experience in managing book records.",
+    //         "Applied core web development principles to develop a responsive and accessible multi-page application.",
+    //         "Optimized code structure for maintainability and scalability in a collaborative public repository.",
+    //     ]
+    // },
 ]
