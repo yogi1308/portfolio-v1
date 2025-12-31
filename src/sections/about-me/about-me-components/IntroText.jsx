@@ -3,7 +3,7 @@ import styles from '../about-me.module.css'
 export default function IntroText() {
     return(
         <div>
-            <p className={`medium-font`}>Hey<span className={`${styles.wave} cursor`} >👋</span>, I'm Shreetej Hadge. I'm currently a Computer Science Student <span className={`${styles.edu} cursor`}>🎓</span> at Arizona State University 
+            <p className={`medium-font`}>Hey<span className={`${styles.wave} cursor`} >👋</span>, I'm Shreetej Hadge. I'm currently a Computer Science Student at Arizona State University 
                 in my Sophomore Year. I am highly passionate about building cool software, and learning more about the vast, endless field of Computer Science and Software Engineering. For now, I am deep into
                 the world of web dev, while polishing my Java, Python, and C/C++ skills.
                 I am also highly interested in Data Science (especially Sports Analytics), and Embedded Systems.... I'm no expert here, but I'm curious and wish to learn more about them.

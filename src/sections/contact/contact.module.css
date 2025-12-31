@@ -60,3 +60,27 @@ textarea {
 .avatarBannerContainer > div.avatarBannerMessage {
     margin: 10px 0px;
 }
+
+.contactSection > h2 {
+    align-items: baseline;
+}
+
+.contactSection h2 div {
+    gap: 0.5rem;
+    align-items: anchor-center;
+    transform: translate(0px, -25px);
+}
+
+.contactSection > form {transform: translateX(2px);}
+
+@media (max-width: 610px) {
+    .contactSection h2 div {transform: translate(1px, -15px);}
+}
+
+@media (max-width: 600px) {
+    .contactSection h2 span {transform: translateX(0px) !important;}
+}
+
+@media (max-width: 375px) {
+    .contactSection h2 div {transform: translate(1px, -10px);}
+}

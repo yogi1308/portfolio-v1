@@ -78,9 +78,9 @@ export default function AvatarMessage() {
                     .pauseFor(2000)
                     .deleteAll()
                     .typeString("Anyways! it was a pleasure meeting you. Hope to see you soon")
-                    .callFunction(() => {}).pauseFor(10000000)
+                    .callFunction(() => {}).pauseFor(2500)
                     .deleteAll()
-                    .typeString("Why are you still here 🤨🤨🤨")
+                    .typeString("Don't be shy, say hi! 👋")
                     .callFunction(() => {})
                     .start();
                 }} options={{delay: Math.floor(Math.random() * (50 - 25 + 1)) + 25, deleteSpeed: 1}}
