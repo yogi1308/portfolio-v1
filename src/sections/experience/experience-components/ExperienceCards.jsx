@@ -6,7 +6,7 @@ export default function ExperienceCards({ experience }) {
             <div className={`${styles.card} flex-vert`} >
                 <div className={`flex-horiz align-end`} >
                     <h3>{experience.role}</h3>
-                    <p>{experience.time}</p>
+                    <h3>{experience.time}</h3>
                 </div>
                 <p className={`italics`} >{experience.where}</p>
                 <ul>
