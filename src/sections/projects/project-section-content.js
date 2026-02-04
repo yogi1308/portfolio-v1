@@ -19,6 +19,9 @@ export let projectsContent = [
         time: "January 2026",
         type: "Personal Project",
         thumbnail: portfolioTUIThumbnail,
+        stack: "C++, CMake, Microsoft Azure, Github Actions",
+        src: "https://github.com/yogi1308/terminal-dot-portfolio-TUI",
+        preview: "ssh portfolio@shreetejhadge.dev",
         projectDetails: [
             "Developed an interactive Terminal User Interface (TUI) portfolio using C++ and the FTXUI library, featuring keyboard-driven navigation and a responsive layout.",
             "Made the TUI accessible globally by serving it via ssh and hosting it on a custom configured Microsoft Azure Virtual Machine",
@@ -32,6 +35,9 @@ export let projectsContent = [
         time: "December 2025",
         type: "Personal Project",
         thumbnail: basicDriveThumbnail,
+        stack: "NodeJS, ExpressJS, PostgreSQL, Prisma ORM, EJS, Cloudinary",
+        src: "https://github.com/yogi1308/basic-google-drive",
+        preview: "https://file-uploader-orpin.vercel.app",
         projectDetails: [
             "Developed a full-stack file storage application using Node.js, Express, and PostgreSQL (via Prisma ORM) to efficiently manage user data and complex file hierarchies.",
             "Integrated Cloudinary API for scalable cloud storage, enabling real-time uploads, folder management, and automatic categorization of assets into photos, videos, and documents.",
@@ -45,6 +51,9 @@ export let projectsContent = [
         time: "November 2025",
         type: "Personal Project",
         thumbnail: shellScriptThumbnail,
+        stack: "Bash Script, Gemini API, Git",
+        src: "https://github.com/yogi1308/shell-scripts",
+        preview: "na",
         projectDetails: [
             "Wrote a shell script that automates git stage commit and push workflow by sending diffs to the Gemini CLI tool to generate context-aware commit messages to the staged files and pushing them.",
             "Integrated 60-second API timeouts and diff size validation to handle large changesets gracefully with manual fallback options.",
@@ -57,6 +66,9 @@ export let projectsContent = [
         time: "November 2025",
         type: "Personal Project",
         thumbnail: cliArtThumbnail,
+        stack: "Python, Pillow, OpenCV (cv2), argparse (stdlib), GitHub Releases",
+        src: "https://github.com/yogi1308/cli-art",
+        preview: "na",
         projectDetails: [
             "Developed a Python command-line tool to convert images from local files or web URLs into full-color ASCII art, with argparse to provide users with full control over output width, color modes, brightness/contrast, and inversion.",
             "Used Pillows library for Image Processing, Colorama to implement multiple color modes, shutil for terminal window data, requests for fetching image from url and argparse to process arguments passed by user using flags.",
@@ -70,6 +82,7 @@ export let projectsContent = [
     //     time: "October 2025",
     //     type: "Personal Project",
     //     thumbnail: libraryInventoryApp,
+    // stack: ,
     //     projectDetails: [
     //         "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
     //         "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
@@ -82,6 +95,9 @@ export let projectsContent = [
         time: "July 2025",
         type: "Personal Project",
         thumbnail: shoppingCartThumbnail,
+        stack: "React, react-router-dom, Vite, CSS Modules, Netlify, RapidAPI",
+        src: "https://github.com/yogi1308/shopping-cart",
+        preview: "https://lustrous-arithmetic-5d279a.netlify.app",
         projectDetails: [
             "Designed and implemented a responsive shopping cart experience with instant cart updates, item quantity adjustment, and delete functionality, leveraging React state management and modular components.",
             "Utilized persistent cart storage via localStorage, ensuring user selections are retained across sessions.",
@@ -95,6 +111,9 @@ export let projectsContent = [
         time: "June 2025",
         type: "Personal Project",
         thumbnail: cvAppThumbnail,
+        stack: "React, Vite, HTML, CSS, Node.js (npm)",
+        src: "https://github.com/yogi1308/cv-application",
+        preview: "https://sunny-fudge-81c254.netlify.app",
         projectDetails: [
             "Engineered a responsive CV/Resume application with React.js, supporting real-time data validation and seamless user input for various resume sections.",            
             "Designed and implemented reusable React components for modular resume creation, improving maintainability and scalability of the codebase.",
@@ -109,6 +128,7 @@ export let projectsContent = [
     //     time: "June 2025",
     //     type: "Personal Project",
     //     thumbnail: memoryCardGameThumbanil,
+    // stack: ,
     //     projectDetails: [
     //         "Designed and developed an interactive Pokémon-themed memory card game using React and Vite, providing an engaging and visually dynamic user experience.",
     //         "Implemented stateful game logic to track user selections, scores, and best scores, preventing repeated card selections and ensuring fair gameplay.",
@@ -123,6 +143,7 @@ export let projectsContent = [
     //     time: "March 2025",
     //     type: "Personal Project",
     //     thumbnail: weatherAppThmbnail,
+    // stack: ,
     //     projectDetails: [
     //         "Developed a full-featured weather application using JavaScript that provides real-time weather data and air quality index(AQI) for user-selected or geolocated locations.",
     //         "Integrated third-party weather APIs (Visual Crossing) to fetch detailed forecasts, including current, hourly (up to 24 hours), and daily (up to 14 days) weather data.",
@@ -136,6 +157,9 @@ export let projectsContent = [
         time: "May 2025",
         type: "Personal Project",
         thumbnail: battleshipThumbnail,
+        stack: "JavaScript, HTML, CSS, Webpack, Jest, TDD, Babel",
+        src: "https://github.com/yogi1308/battleship",
+        preview: "https://yogi1308.github.io/battleship/",
         projectDetails: [
             "Designed and implemented a classic Battleship game with both single-player (vs. Computer Algorithm) and two-player modes using JavaScript, HTML, and CSS",
             "Engineered a modular game architecture featuring ship placement, turn-based attack logic, and win/loss detection.",
@@ -151,6 +175,7 @@ export let projectsContent = [
     //     time: "March 2025",
     //     type: "Personal Project",
     //     thumbnail: toDoThumbnail,
+    // stack: ,
     //     projectDetails: [
     //         "Designed and implemented a JavaScript-based to-do list application, focusing on intuitive task management and seamless user experience.",
     //         "Applied best practices in front-end development to enable real-time task addition, editing, and deletion.",
@@ -164,6 +189,7 @@ export let projectsContent = [
     //     time: "Jan 2025",
     //     type: "Personal Project",
     //     thumbnail: restaurantPageThumbnail,
+    // stack: ,
     //     projectDetails: [
     //         "Developed a multi-page restaurant website using modular vanilla JavaScript, enabling dynamic content switching between homepage, menu, and contact sections without page reloads.",
     //         "Designed and implemented a visually appealing UI with custom CSS, including responsive layouts, custom fonts, and SVG graphics to enhance user experience.",
@@ -178,6 +204,7 @@ export let projectsContent = [
     //     time: "Dec 2024",
     //     type: "Personal Project",
     //     thumbnail: libraryThumbnail,
+    // stack: ,
     //     projectDetails: [
     //         "Engineered a web-based library management system using JavaScript, HTML, and CSS, supporting efficient cataloging and user interactions.",
     //         "Implemented dynamic UI components and interactive features to enhance the user experience in managing book records.",

@@ -41,6 +41,69 @@
     display: block;
     padding: 5px;
     border: 1px solid white;
+    background: black;
+}
+
+.projPreSrcStack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 0px;
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.projPreSrcStack p:not(:nth-child(2)) {
+    text-wrap-mode: nowrap;
+}
+
+.projPreSrcStack p:not(:nth-child(2)) a span {
+    text-wrap-mode: wrap;
+}
+
+.projPreSrcStack p:nth-child(2) {
+    justify-self: right;
+    grid-row: span 2;
+    text-align: right;
+}
+
+.projPreSrcStack :nth-child(2) > span {text-decoration: underline var(--accent-color) 2.5px;}
+
+.projPreSrcStack p:not(:nth-child(2)) {
+    width: fit-content;
+}
+
+.projPreSrcStack p:not(:nth-child(2)) span,
+.projPreSrcStack p:not(:nth-child(2)) a {
+    text-decoration: none;
+}
+
+.projPreSrcStack p:not(:nth-child(2)) span {
+    background-image: linear-gradient(var(--accent-color), var(--accent-color));
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+}
+
+/* Label Underline: Visible by default, shrinks to the right on hover */
+.projPreSrcStack p:not(:nth-child(2)) > span {
+    background-size: 100% 2px;
+    background-position: 0% 100%;
+}
+
+.projPreSrcStack p:not(:nth-child(2)):has(a:hover) > span {
+    background-size: 0% 2px;
+    background-position: 100% 100%;
+}
+
+/* Link Underline: Hidden by default, grows from the left on hover */
+.projPreSrcStack p:not(:nth-child(2)) a span {
+    background-size: 0% 2px;
+    background-position: 100% 100%;
+}
+
+.projPreSrcStack p:not(:nth-child(2)) a:hover span {
+    background-size: 100% 2px;
+    background-position: 0% 100%;
 }
 
 /* Optional: Add a subtle glare effect */

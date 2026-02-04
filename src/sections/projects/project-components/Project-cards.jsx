@@ -44,7 +44,18 @@ export default function ProjectsCards({ project }) {
                     <h3><a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content' }}>
                         {project.name}
                     </a></h3>
-                    <p>{project.time}</p>
+                    <h3>{project.time}</h3>
+                </div>
+                <div className={`${styles.projPreSrcStack}`}>
+                    <p>
+                        <span>Preview</span> - {project?.preview === 'na' ? (
+                            'N/A'
+                        ) : (
+                            <a href={`${project?.preview}`} target="_blank" rel="noopener noreferrer"><span>{project?.preview}</span></a>
+                        )}
+                    </p>
+                    <p><span>Stack</span> - {project?.stack}</p>
+                    <p><span>Src</span> - <a href={`${project?.src}`} target="_blank" rel="noopener noreferrer"><span>{project?.src}</span></a></p>
                 </div>
                 <ul>
                     {project.projectDetails.map((detail, index) => (
