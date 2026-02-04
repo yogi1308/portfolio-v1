@@ -15,14 +15,15 @@ import portfolioTUIThumbnail from '../../assets/images/portfolio-tui-thumbnail.p
 export let projectsContent = [
     {
         name: "Portfolio TUI",
-        projectLink: "ssh portfolio@shreetejhadge.dev",
+        projectLink: "https://github.com/yogi1308/terminal-dot-portfolio-TUI",
         time: "January 2026",
         type: "Personal Project",
         thumbnail: portfolioTUIThumbnail,
         projectDetails: [
             "Developed an interactive Terminal User Interface (TUI) portfolio using C++ and the FTXUI library, featuring keyboard-driven navigation and a responsive layout.",
             "Made the TUI accessible globally by serving it via ssh and hosting it on a custom configured Microsoft Azure Virtual Machine",
-            "Integrated a functional contact form with input validation and asynchronous message dispatching using cURL and std::thread to maintain UI responsiveness."
+            "Integrated a functional contact form with input validation and asynchronous message dispatching using cURL.",
+            "Configured GitHub Actions to automatically build the C++/CMake binary and deploy updates to the Azure VM on push, ensuring the live SSH-accessible portfolio stays up to date."
         ]
     },
     {
@@ -63,18 +64,18 @@ export let projectsContent = [
 
         ]
     },   
-    {
-        name: "Library Inventory Application",
-        projectLink: "https://inventory-application-ivory.vercel.app",
-        time: "October 2025",
-        type: "Personal Project",
-        thumbnail: libraryInventoryApp,
-        projectDetails: [
-            "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
-            "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
-            "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
-        ]
-    },
+    // {
+    //     name: "Library Inventory Application",
+    //     projectLink: "https://inventory-application-ivory.vercel.app",
+    //     time: "October 2025",
+    //     type: "Personal Project",
+    //     thumbnail: libraryInventoryApp,
+    //     projectDetails: [
+    //         "Developed a full-stack library inventory application using Node.js, Express, and PostgreSQL.",
+    //         "Designed a relational database schema with many-to-many relationships to ensure data integrity.",
+    //         "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
+    //     ]
+    // },
     {
         name: "Sneaker Shopping Cart",
         projectLink: "https://lustrous-arithmetic-5d279a.netlify.app",
