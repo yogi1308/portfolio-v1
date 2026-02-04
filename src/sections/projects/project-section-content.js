@@ -10,8 +10,21 @@ import libraryInventoryApp from '../../assets/images/library-inventory-app.png'
 import cliArtThumbnail from '../../assets/images/cli-art-thumbnail.png'
 import basicDriveThumbnail from '../../assets/images/basic-drive-thumbnail.png'
 import shellScriptThumbnail from '../../assets/images/git-gemini-shell-script.png'
+import portfolioTUIThumbnail from '../../assets/images/portfolio-tui-thumbnail.png'
 
 export let projectsContent = [
+    {
+        name: "Portfolio TUI",
+        projectLink: "ssh portfolio@shreetejhadge.dev",
+        time: "January 2026",
+        type: "Personal Project",
+        thumbnail: portfolioTUIThumbnail,
+        projectDetails: [
+            "Developed an interactive Terminal User Interface (TUI) portfolio using C++ and the FTXUI library, featuring keyboard-driven navigation and a responsive layout.",
+            "Made the TUI accessible globally by serving it via ssh and hosting it on a custom configured Microsoft Azure Virtual Machine",
+            "Integrated a functional contact form with input validation and asynchronous message dispatching using cURL and std::thread to maintain UI responsiveness."
+        ]
+    },
     {
         name: "Basic Google Drive",
         projectLink: "https://file-uploader-orpin.vercel.app",
