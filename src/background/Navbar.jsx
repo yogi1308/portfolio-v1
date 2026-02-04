@@ -7,6 +7,7 @@ export default function Navbar() {
   const [isReappearing, setIsReappearing] = useState(false)
   const [isAboveThreshold, setIsAboveThreshold] = useState(true)
   const [isDisappearing, setIsDisappearing] = useState(false)
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,9 +70,11 @@ export default function Navbar() {
               : styles.hidden
       } flex-horiz`}
     >
-      <div className={styles.dropdown}>
-        <div className={styles.titleButton}>Navigation ▾</div>
-        <ul className={styles.dropdownContent}>
+      <div className={styles.dropdown} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
+        <div className={styles.titleButton} onClick={() => setOpen(!open)}>
+          Navigation <span>{!open ? '▾' : '▴'}</span>
+        </div>
+        <ul className={`${styles.dropdownContent} ${open ? styles.show : styles.dontshow}`}>
           <li><a href="#landingPage">Landing Page</a></li>
           <li><a href="#aboutMe">About Me</a></li>
           <li><a href="#experience">Experience</a></li>
