@@ -66,7 +66,7 @@ export let projectsContent = [
         time: "November 2025",
         type: "Personal Project",
         thumbnail: cliArtThumbnail,
-        stack: "Python, Pillow, OpenCV (cv2), argparse (stdlib), GitHub Releases",
+        stack: "Python, Pillow, OpenCV (cv2), argparse",
         src: "https://github.com/yogi1308/cli-art",
         preview: "na",
         projectDetails: [

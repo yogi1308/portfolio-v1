@@ -40,11 +40,11 @@ export default function ProjectsCards({ project }) {
                 </a>
             </div>
             <div className={`${styles.card} flex-vert`} >
-                <div className={`flex-horiz align-end`} >
-                    <h3><a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content' }}>
+                <div className={`flex-horiz align-end`} style={{ gap: '1rem' }}>
+                    <h3><a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} (opens in a new tab)`}style={{ width: 'min-content', textWrapMode: 'wrap' }}>
                         {project.name}
                     </a></h3>
-                    <h3>{project.time}</h3>
+                    <h3 style={{ textWrapMode: 'nowrap' }}>{project.time}</h3>
                 </div>
                 <div className={`${styles.projPreSrcStack}`}>
                     <p>
@@ -54,8 +54,8 @@ export default function ProjectsCards({ project }) {
                             <a href={`${project?.preview}`} target="_blank" rel="noopener noreferrer"><span>{project?.preview}</span></a>
                         )}
                     </p>
-                    <p><span>Stack</span> - {project?.stack}</p>
                     <p><span>Src</span> - <a href={`${project?.src}`} target="_blank" rel="noopener noreferrer"><span>{project?.src}</span></a></p>
+                    <p><span>Stack</span> - {project?.stack}</p>
                 </div>
                 <ul>
                     {project.projectDetails.map((detail, index) => (
