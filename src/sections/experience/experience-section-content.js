@@ -20,17 +20,17 @@ export let experienceContent = [
             "Conducted regular reviews of documentation to ensure alignment with project goals and stakeholder requirements."
         ]
     },
-    {
-        role: "Meeting Lead",
-        where: "Saayam for All, EPICS ASU",
-        time: "August 2024 - December 2024",
-        experienceDetails: [
-            "Planned, organized, and facilitated weekly team meetings and created detailed meeting agendas.",
-            "Documented meetings, coordinated schedules, tracked action items, and supported project planning to ensure timely deliverables.",
-            "Developed and maintained a centralized repository for meeting notes, action items, and project updates.",
-            "Monitored progress on action items and provided regular updates to the team and project leads."
-        ]
-    },
+    // {
+    //     role: "Meeting Lead",
+    //     where: "Saayam for All, EPICS ASU",
+    //     time: "August 2024 - December 2024",
+    //     experienceDetails: [
+    //         "Planned, organized, and facilitated weekly team meetings and created detailed meeting agendas.",
+    //         "Documented meetings, coordinated schedules, tracked action items, and supported project planning to ensure timely deliverables.",
+    //         "Developed and maintained a centralized repository for meeting notes, action items, and project updates.",
+    //         "Monitored progress on action items and provided regular updates to the team and project leads."
+    //     ]
+    // },
     // {
     //     role: "Student Council Member",
     //     where: "Corvuss American Academy",
