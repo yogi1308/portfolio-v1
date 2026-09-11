@@ -8,7 +8,7 @@ import FloatingParticlesBackground from "../../background/ParticleBg"
 export default function Projects() {
   const sectionRef = useRef(null)
   return (
-    <div ref={sectionRef} className={`${styles.experienceSection} section-margin`}>
+    <div ref={sectionRef} className={`${styles.experienceSection} section-margin section-gap-lg`}>
         <FloatingParticlesBackground pointerTargetRef={sectionRef} className={`${styles.floatingParticlesBackground}`}/>
         <h2 className={`${styles.experienceSectionTitle} big-font`} id="experience">Experience</h2>
         <div className={`${styles.progressAndCardsContainer} `}>

@@ -34,6 +34,11 @@ a {
 @media  (max-width: 600px) {
   .big-font {font-size: 3rem;}
   .section-margin {margin: 2rem}
+  .section-gap-lg {padding-bottom: 2rem}
+}
+
+.section-gap-lg {
+  padding-bottom: 5rem;
 }
 
 @media  (max-width: 375px) {
