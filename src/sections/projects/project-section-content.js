@@ -11,8 +11,44 @@ import cliArtThumbnail from '../../assets/images/cli-art-thumbnail.png'
 import basicDriveThumbnail from '../../assets/images/basic-drive-thumbnail.png'
 import shellScriptThumbnail from '../../assets/images/git-gemini-shell-script.png'
 import portfolioTUIThumbnail from '../../assets/images/portfolio-tui-thumbnail.png'
+import nbaNetworkThumbnail from '../../assets/images/nba-network-thunmbnail.png'
+import teejThumbnail from '../../assets/images/teej-thumbnail.png'
 
 export let projectsContent = [
+    {
+        name: "NBA Network",
+        projectLink: "https://nba-network.vercel.app/",
+        time: "August 2026",
+        type: "Personal Project",
+        thumbnail: nbaNetworkThumbnail,
+        stack: "React, Python, Tailwind, Zustand, Graphology, SigmaJS, Network Theory, NetworkX, ForceAtlas2",
+        src: "https://github.com/yogi1308/nba-network",
+        preview: "https://nba-network.vercel.app/",
+        projectDetails: [
+            "Built an interactive network visualization of NBA history using Graphology and SigmaJS, modeling NBA players as nodes and shared-team relationships as undirected weighted edges based on the number of seasons played together.",
+            "Developed a Python data pipeline using nba_api to collect career and team-history data for NBA players, query team rosters by season, and generate player–teammate relationships while tracking completed and failed requests for recoverable data collection.",
+            "Engineered a NetworkX graph-processing pipeline to construct the teammate network, calculate edge weights from shared seasons, and generate reproducible ForceAtlas2 layouts before exporting the graph to JSON for the web application.",
+            "Implemented graph traversal and path-finding algorithms to identify shortest paths between players, paths of specific distances between two players, and paths of distances within a range",
+            "Developed interactive exploration tools with React, Zustand, and Tailwind, supporting player search, team/decade filtering, network-depth exploration, and graph-based metrics such as connectivity",
+        ]
+    },
+    {
+        name: "Artist Portfolio Platform",
+        projectLink: "https://teej01.vercel.app/",
+        time: "July 2026",
+        type: "Freelance",
+        thumbnail: teejThumbnail,
+        stack: "React, TypeScript, Vite, Tailwind CSS, React Router, Motion, Formspree, Stripe, Vercel, PostgreSQL, ExpressJS, Prisma ORM",
+        src: "https://github.com/yogi1308/teej",
+        preview: "https://teej01.vercel.app/",
+        projectDetails: [
+            "Built and deployed a full-stack personal platform for an independent artist, unifying music, merchandise, blog, and donation features into a single site using React, TypeScript, Vite, and Tailwind CSS, hosted on Vercel",
+            "Implemented secure admin authentication with JWT to let the client manage all content (music, merch, blog posts) independently without exposing the site to unauthorized edits",
+            "Owned the project end-to-end, from architecture, frontend, backend API, and deployment. Took it from concept to a live production site for an external, non-technical client",
+            "Built a custom rich-text blog editor with Tiptap supporting images, video, code blocks, and tables, and integrated Cloudinary for automatic upload/organization of audio tracks, product photos, and cover art",
+            "Integrated third-party services like Formspree and stripe to handle contact and donation flows, cutting backend complexity while keeping a fully custom front-end experience",
+        ]
+    }, 
     {
         name: "Portfolio TUI",
         projectLink: "https://github.com/yogi1308/terminal-dot-portfolio-TUI",
@@ -45,37 +81,37 @@ export let projectsContent = [
 
         ]
     },
-    {
-        name: "Git Gemini Automation Shell Script",
-        projectLink: "https://github.com/yogi1308/shell-scripts",
-        time: "November 2025",
-        type: "Personal Project",
-        thumbnail: shellScriptThumbnail,
-        stack: "Bash Script, Gemini API, Git",
-        src: "https://github.com/yogi1308/shell-scripts",
-        preview: "na",
-        projectDetails: [
-            "Wrote a shell script that automates git stage commit and push workflow by sending diffs to the Gemini CLI tool to generate context-aware commit messages to the staged files and pushing them.",
-            "Integrated 60-second API timeouts and diff size validation to handle large changesets gracefully with manual fallback options.",
-            "Implemented comprehensive error handling for API timeouts, authentication failures, and network issues with user-friendly troubleshooting messages."
-        ]
-    },
-    {
-        name: "CLI Art",
-        projectLink: "https://github.com/yogi1308/cli-art",
-        time: "November 2025",
-        type: "Personal Project",
-        thumbnail: cliArtThumbnail,
-        stack: "Python, Pillow, OpenCV (cv2), argparse",
-        src: "https://github.com/yogi1308/cli-art",
-        preview: "na",
-        projectDetails: [
-            "Developed a Python command-line tool to convert images from local files or web URLs into full-color ASCII art, with argparse to provide users with full control over output width, color modes, brightness/contrast, and inversion.",
-            "Used Pillows library for Image Processing, Colorama to implement multiple color modes, shutil for terminal window data, requests for fetching image from url and argparse to process arguments passed by user using flags.",
-            "Packaged the final script into standalone executables for both Windows (.exe), WSL and similar Ubuntu-based Linux systems using PyInstaller and published them on GitHub Releases."
-
-        ]
-    },   
+    // {
+    //     name: "Git Gemini Automation Shell Script",
+    //     projectLink: "https://github.com/yogi1308/shell-scripts",
+    //     time: "November 2025",
+    //     type: "Personal Project",
+    //     thumbnail: shellScriptThumbnail,
+    //     stack: "Bash Script, Gemini API, Git",
+    //     src: "https://github.com/yogi1308/shell-scripts",
+    //     preview: "na",
+    //     projectDetails: [
+    //         "Wrote a shell script that automates git stage commit and push workflow by sending diffs to the Gemini CLI tool to generate context-aware commit messages to the staged files and pushing them.",
+    //         "Integrated 60-second API timeouts and diff size validation to handle large changesets gracefully with manual fallback options.",
+    //         "Implemented comprehensive error handling for API timeouts, authentication failures, and network issues with user-friendly troubleshooting messages."
+    //     ]
+    // },
+    // {
+    //     name: "CLI Art",
+    //     projectLink: "https://github.com/yogi1308/cli-art",
+    //     time: "November 2025",
+    //     type: "Personal Project",
+    //     thumbnail: cliArtThumbnail,
+    //     stack: "Python, Pillow, OpenCV (cv2), argparse",
+    //     src: "https://github.com/yogi1308/cli-art",
+    //     preview: "na",
+    //     projectDetails: [
+    //         "Developed a Python command-line tool to convert images from local files or web URLs into full-color ASCII art, with argparse to provide users with full control over output width, color modes, brightness/contrast, and inversion.",
+    //         "Used Pillows library for Image Processing, Colorama to implement multiple color modes, shutil for terminal window data, requests for fetching image from url and argparse to process arguments passed by user using flags.",
+    //         "Packaged the final script into standalone executables for both Windows (.exe), WSL and similar Ubuntu-based Linux systems using PyInstaller and published them on GitHub Releases."
+    //
+    //     ]
+    // },   
     // {
     //     name: "Library Inventory Application",
     //     projectLink: "https://inventory-application-ivory.vercel.app",
@@ -89,39 +125,39 @@ export let projectsContent = [
     //         "Authored and optimized complex SQL queries  to build RESTful API endpoints for complete CRUD functionality, enabling filtering by author and genre and to manage book data.",
     //     ]
     // },
-    {
-        name: "Sneaker Shopping Cart",
-        projectLink: "https://lustrous-arithmetic-5d279a.netlify.app",
-        time: "July 2025",
-        type: "Personal Project",
-        thumbnail: shoppingCartThumbnail,
-        stack: "React, react-router-dom, Vite, CSS Modules, Netlify, RapidAPI",
-        src: "https://github.com/yogi1308/shopping-cart",
-        preview: "https://lustrous-arithmetic-5d279a.netlify.app",
-        projectDetails: [
-            "Designed and implemented a responsive shopping cart experience with instant cart updates, item quantity adjustment, and delete functionality, leveraging React state management and modular components.",
-            "Utilized persistent cart storage via localStorage, ensuring user selections are retained across sessions.",
-            "Integrated a custom theming solution, supporting both light and dark modes with smooth transitions across the app.",
-            "Developed a user-centric interface including animated cart side-panel, overlay effects, and real-time total calculation, enhancing usability on both desktop and mobile devices.",
-        ]
-    },
-    {
-        name: "Resume/CV Builder",
-        projectLink: "https://sunny-fudge-81c254.netlify.app",
-        time: "June 2025",
-        type: "Personal Project",
-        thumbnail: cvAppThumbnail,
-        stack: "React, Vite, HTML, CSS, Node.js (npm)",
-        src: "https://github.com/yogi1308/cv-application",
-        preview: "https://sunny-fudge-81c254.netlify.app",
-        projectDetails: [
-            "Engineered a responsive CV/Resume application with React.js, supporting real-time data validation and seamless user input for various resume sections.",            
-            "Designed and implemented reusable React components for modular resume creation, improving maintainability and scalability of the codebase.",
-            "Leveraged modern React features (hooks, context API) to manage application state efficiently and ensure a cohesive user experience.",
-            "Integrated print and PDF export capabilities, enabling users to download polished resumes directly from the browser.",
-            "Ensured accessibility and cross-browser compatibility through semantic HTML and extensive CSS styling.",
-        ]
-    },
+    // {
+    //     name: "Sneaker Shopping Cart",
+    //     projectLink: "https://lustrous-arithmetic-5d279a.netlify.app",
+    //     time: "July 2025",
+    //     type: "Personal Project",
+    //     thumbnail: shoppingCartThumbnail,
+    //     stack: "React, react-router-dom, Vite, CSS Modules, Netlify, RapidAPI",
+    //     src: "https://github.com/yogi1308/shopping-cart",
+    //     preview: "https://lustrous-arithmetic-5d279a.netlify.app",
+    //     projectDetails: [
+    //         "Designed and implemented a responsive shopping cart experience with instant cart updates, item quantity adjustment, and delete functionality, leveraging React state management and modular components.",
+    //         "Utilized persistent cart storage via localStorage, ensuring user selections are retained across sessions.",
+    //         "Integrated a custom theming solution, supporting both light and dark modes with smooth transitions across the app.",
+    //         "Developed a user-centric interface including animated cart side-panel, overlay effects, and real-time total calculation, enhancing usability on both desktop and mobile devices.",
+    //     ]
+    // },
+    // {
+    //     name: "Resume/CV Builder",
+    //     projectLink: "https://sunny-fudge-81c254.netlify.app",
+    //     time: "June 2025",
+    //     type: "Personal Project",
+    //     thumbnail: cvAppThumbnail,
+    //     stack: "React, Vite, HTML, CSS, Node.js (npm)",
+    //     src: "https://github.com/yogi1308/cv-application",
+    //     preview: "https://sunny-fudge-81c254.netlify.app",
+    //     projectDetails: [
+    //         "Engineered a responsive CV/Resume application with React.js, supporting real-time data validation and seamless user input for various resume sections.",            
+    //         "Designed and implemented reusable React components for modular resume creation, improving maintainability and scalability of the codebase.",
+    //         "Leveraged modern React features (hooks, context API) to manage application state efficiently and ensure a cohesive user experience.",
+    //         "Integrated print and PDF export capabilities, enabling users to download polished resumes directly from the browser.",
+    //         "Ensured accessibility and cross-browser compatibility through semantic HTML and extensive CSS styling.",
+    //     ]
+    // },
     // {
     //     name: "Memory Card Game",
     //     projectLink: "https://chipper-fox-9c608c.netlify.app",
